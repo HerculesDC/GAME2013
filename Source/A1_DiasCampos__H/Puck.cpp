@@ -11,11 +11,6 @@ APuck::APuck()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	m_MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Puck Body"));
-	RootComponent = m_MeshComponent;
-
-	m_MeshComponent->SetMaterial(0, m_Material);
 }
 
 // Called when the game starts or when spawned

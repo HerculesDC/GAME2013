@@ -17,16 +17,6 @@ public:
 	APuck();
 
 protected:
-
-	UPROPERTY(EditDefaultsOnly, Category = "Puck Appearance")
-	UStaticMeshComponent* m_MeshComponent;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Puck Appearance")
-	UMaterial* m_Material;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Puck Appearance")
-	UPhysicalMaterial* m_PhysicsMaterial;
-	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
