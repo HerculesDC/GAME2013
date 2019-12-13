@@ -2,7 +2,8 @@
 
 
 #include "Paddle.h"
-
+#include "Materials/Material.h"
+#include "Components/StaticMeshComponent.h"
 
 // Sets default values
 APaddle::APaddle()
@@ -10,6 +11,10 @@ APaddle::APaddle()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	MeshComp.Add(CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Bod Lower")));
+	MeshComp.Add(CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Bod Upper")));
+
+	MyMat = CreateDefaultSubobject<UMaterial>(TEXT("BodMat"));
 }
 
 // Called when the game starts or when spawned

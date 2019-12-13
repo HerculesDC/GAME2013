@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "Paddle.generated.h"
 
+class UStaticMeshComponent;
 class UMaterial;
 UCLASS()
 class A1_DIASCAMPOS__H_API APaddle : public APawn
@@ -19,6 +20,12 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Paddle Body")
+	TArray<UStaticMeshComponent*> MeshComp;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Paddle Body")
+	UMaterial* MyMat;
 
 public:	
 	// Called every frame
